@@ -1,0 +1,93 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    background-image: url("../Images/Securepayment_benifits.PNG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #354b5e;
+    color: #d1e4f7; /* Light blue text */
+    padding: 1rem 2rem;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.benefit-card {
+    background: linear-gradient(to bottom, #ffcf9e, #ff9e80);;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.benefit-card h2 {
+    color: #354b5e;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: #354b5e;
+    color: #d1e4f7; /* Light blue */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #8bbde7;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #669bbc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-categories, .profiles {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}

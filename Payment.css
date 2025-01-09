@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #2c3e50;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #354b5e;
+    color: #d1e4f7; /* Light blue text */
+    padding: 1rem 2rem;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    
+    
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    color: #ffcf9e; /* Soft warm color for logo */
+}
+
+header nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    list-style-type: none;
+  
+}
+
+header nav ul li a {
+    color: #d1e4f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+   
+}
+
+header nav ul li a:hover {
+    color: #8bbde7;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between grid items */
+    padding: 1rem;
+}
+
+/* Account Summary */
+.summary {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #354b5e;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Payment Form */
+.payment-section {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 1rem;
+}
+
+.payment-form label {
+    font-weight: bold;
+}
+
+.payment-form input,
+.payment-form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.payment-form .btn {
+    display: block;
+    background-color: #354b5e;
+    color: #ffffff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.payment-form .btn:hover {
+    background-color: #ffcf9e;
+    color: #354b5e;
+}
+
+/* Recent Transactions */
+.recent-transactions {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 1rem;
+}
+
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-transactions table th,
+.recent-transactions table td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.recent-transactions table th {
+    background-color: #354b5e;
+    color: #ffffff;
+}
+
+.recent-transactions table tr:nth-child(even) {
+    background-color: #f4f4f9;
+}
+
+/* Footer */
+footer {
+    background-color: #354b5e;
+    color: #d1e4f7; /* Light blue */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #8bbde7;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-categories, .profiles {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}

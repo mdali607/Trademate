@@ -1,0 +1,187 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Global styling */
+body {
+    min-height: 100vh;
+    background-color: #2c3e50; /* Dark background */
+    color: #ffffff; /* Light text color */
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Layout for header, main, and footer */
+}
+
+/* Navbar Styling */
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Logo and navigation links */
+    align-items: center;
+    background-color: #34495e;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+}
+
+nav .logo {
+    color:#ffcf9e; /* Soft warm color for logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto)); /* Responsive navigation links */
+    gap: 1.5rem;
+    justify-content: end; /* Align links to the right */
+    list-style: none;
+}
+
+nav .nav-links li {
+    display: block; /* Ensure list items behave correctly */
+}
+
+nav .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+    color: #8bbde7;
+}
+
+
+nav .button {
+    background-color: #8bbde7;
+    color: #354b5e;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav .button:hover {
+    background-color: #669bbc;
+}
+
+/* Form container styling */
+section {
+    background-color: #34495e; /* Slightly lighter dark background */
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    gap: 1rem; /* Add spacing between form elements */
+    text-align: left; /* Align text to the left for better form layout */
+}
+
+/* Headings */
+h2 {
+    text-align: center; /* Center-align the heading */
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ecf0f1; /* Light text color */
+}
+
+/* Input fields */
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Adjust text area height */
+textarea {
+    resize: none; /* Disable resizing for better styling */
+    height: 150px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    background-color: #8bbde7;
+    color: #354b5e;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #669bbc; /* Hover effect */
+}
+
+/* Links for additional actions */
+p {
+    margin-top: 1rem;
+    text-align: center;
+    color: #d1e4f7;
+}
+
+a {
+    color: #d1e4f7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #354b5e;
+    color: #d1e4f7; /* Light blue */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #8bbde7;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #669bbc;
+} 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        grid-template-columns: 1fr; /* Stack logo and links */
+        grid-template-rows: auto auto; /* Adjust layout for smaller screens */
+        row-gap: 1rem; /* Add spacing between rows */
+    }
+
+    nav .nav-links {
+        grid-template-columns: 1fr; /* Stack links vertically */
+        justify-self: start; /* Align links to the left */
+        gap: 0.5rem; /* Reduce gap between links */
+    }
+
+}
