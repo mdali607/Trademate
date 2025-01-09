@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeMate - Sign Up</title>
+    <link rel="stylesheet" href="../CSS_Stylesheets/Signup_login.css"> <!-- Link to external stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.PNG"> <!-- Adding Favicon -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1><img src="../Images/Logo.PNG" alt="TradeMate Logo" width="40px" height="40px"> TradeMate</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Index.html#about">About Us</a></li>
+            <li><a href="Service_Listings.html">Our Services</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sign-Up Section -->
+    <section id="signup-section">
+        <h2>Create Your Account</h2>
+        <form action="signup_process.php" method="POST" onsubmit="return validatePassword()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="service">Select the service:</label>
+            <select id="service" name="service" required>
+                <option value="buying">Buying Service</option>
+                <option value="selling">Selling Service</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="Login.html">Login here</a>.</p>
+    </section>
+
+    <script>
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TradeMate. All Rights Reserved.</p>
+        <p><a href="terms_of_service.html">Terms and Conditions</a> | <a href="privacy_policy.html">Privacy Policy</a></p>
+    </footer>
+    
+</body>
+</html>

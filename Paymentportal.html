@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Dashboard</title>
+    <link rel="stylesheet" href="../CSS_Stylesheets/Payment.css">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.PNG"> <!-- Adding Favicon -->
+</head>
+<body>
+    <header class="header">
+		 <div class="logo">
+            <h1><img src="../Images/Logo.PNG" alt="TradeMate Logo" width="40px" height="40px"> TradeMate</h1>
+        </div>
+        <h1>Payment Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="Service_Listings.html">Book Service</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="summary">
+            <h2>Account Summary</h2>
+            <div class="card">
+                <h3>Current Balance</h3>
+                <p>$2,350.00</p>
+            </div>
+            <div class="card">
+                <h3>Transactions</h3>
+                <p>5 this month</p>
+            </div>
+            <div class="card">
+                <h3>Pending Payments</h3>
+                <p>$150.00</p>
+            </div>
+        </section>
+
+        <section class="payment-section">
+            <h2>Make a Payment</h2>
+            <form class="payment-form">
+                <label for="payee">Payee:</label>
+                <input type="text" id="payee" name="payee" placeholder="Enter payee name" required>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                </select>
+			  
+			   <!-- New Fields for Card Payment -->
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Enter card number" maxlength="16" required>
+
+                <div class="card-details">
+                    <div>
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div>
+                        <label for="cvc">CVC:</label>
+                        <input type="text" id="cvc" name="cvc" placeholder="CVC" maxlength="3" required>
+                </div>
+                
+                <button type="submit" class="btn">Pay Now</button>
+            </form>
+        </section>
+
+        <section class="recent-transactions">
+            <h2>Recent Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Payee</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 25, 2024</td>
+                        <td>John Doe</td>
+                        <td>$500.00</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 24, 2024</td>
+                        <td>Mark Walter</td>
+                        <td>$250.00</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 23, 2024</td>
+                        <td>Mary Connie</td>
+                        <td>$475.00</td>
+                        <td>Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 TradeMate. All Rights Reserved.</p>
+        <p><a href="terms_of_service.html">Terms and Conditions</a> | <a href="privacy_policy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../CSS_Stylesheets/Contact.css"> <!-- Link to external stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.PNG"> <!-- Adding Favicon -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1><img src="../Images/Logo.PNG" alt="TradeMate Logo" width="40px" height="40px"> TradeMate</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Index.html#about">About Us</a></li>
+            <li><a href="Service_Listings.html">Services</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Signup.html" class="button"> Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <!-- Full Name -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Subject -->
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+            <!-- Message -->
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Need further assistance? <a href="faq.html">Check our FAQ</a></p>
+    </section>
+    
+     <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TradeMate. All Rights Reserved.</p>
+        <p><a href="terms_of_service.html">Terms and Conditions</a> | <a href="privacy_policy.html">Privacy Policy</a></p>
+    </footer>
+    
+    
+</body>
+</html>

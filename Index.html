@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeMate – Online Platform for Trade Services</title>
+    <link rel="stylesheet" href="../CSS_Stylesheets/Index.css"> <!-- Link to external stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.PNG"> <!-- Adding Favicon -->
+
+    
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="logo">
+            <h1><img src="../Images/Logo.PNG" alt="TradeMate Logo" width="40px" height="40px"> TradeMate</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Service_Listings.html">Our Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Signup.html" class="button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Brief Introduction -->
+    <section id="hero">
+        <h2>Welcome to TradeMate</h2>
+        <p>Your reliable platform to connect with skilled trade professionals.</p>
+        <a href="Service_Listings.html" class="button">Find a Service</a>
+    </section>
+
+    <!-- Service Categories Section -->
+    <section id="services">
+        <h2>Popular Services</h2>
+        <div class="service-categories">
+            <div class="category gradient-top-bottom">
+                <a href="plumbing.html"><h3>Plumbing</h3></a>
+                <p style="color: black">Find trusted plumbers for repairs and maintenance.</p>
+            </div>
+            <div class="category gradient-top-bottom">
+                <a href="electrical.html"><h3>Electrical</h3></a>
+                <p style="color: black">Reliable electricians for all your electrical needs.</p>
+            </div>
+            <div class="category gradient-top-bottom">
+                <a href="carpentry.html"><h3>Carpentry</h3></a>
+                <p style="color: black">Expert carpenters for custom projects and repairs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trade Worker Profiles Section -->
+    <section id="profiles">
+        <h2>Featured Trade Workers</h2>
+        <div class="profiles">
+            <div class="profile">
+                <img src="../Images/Electrician1.PNG" alt="Profile picture of electrician">
+                <h3>John Wheller</h3>
+                <p>Electrician with 5+ years of experience.</p>
+                <a href="service_provider_profile.html" class="button">View Profile</a>
+            </div>
+            <div class="profile">
+                <img src="../Images/Plumber1.PNG" alt="Profile picture of plumber">
+                <h3>David Matthew</h3>
+                <p>Plumber with 3+ years of experience.</p>
+                <a href="service_provider_profile.html" class="button">View Profile</a>
+            </div>
+            <div class="profile">
+                <img src="../Images/Painter1.PNG" alt="Profile picture of painter">
+                <h3>Mary Connie</h3>
+                <p>Painter with 4+ years of experience.</p>
+                <a href="service_provider_profile.html" class="button">View Profile</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Booking and Payment Information -->
+    <section id="booking">
+        <h2>Secure and Easy Booking</h2>
+        <p>Book your services directly through TradeMate with secure payment options.</p>
+        <a href="Secureeasy.html" target="_blank">
+            <button>Learn More</button>
+        </a>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2>What Our Clients Say</h2>
+        <div class="reviews-container">
+            <div class="review">
+                <p>“Excellent service! Very professional and punctual.” - Jane Doe</p>
+            </div>
+            <div class="review">
+                <p>“Highly recommend! The plumber fixed my issue in no time.” - Mark Smith</p>
+            </div>
+            <div class="review">
+                <p>“Amazing experience, very skilled electrician. My problem was solved quickly.” - Lisa Green</p>
+            </div>
+            <div class="review">
+                <p>“Great carpentry work! The custom shelves look perfect.” - John Brown</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section 
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section> -->
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>TradeMate is an online platform designed to bridge the gap between skilled trade professionals and customers looking for reliable service providers. Founded in 2024, our mission is to provide a user-friendly and trustworthy platform where customers can connect with verified tradespeople across various fields, including plumbing, electrical work, carpentry, and more.</p>
+        <p>Our team is committed to making the booking process easy and secure, offering in-depth profiles, customer reviews, and transparent pricing information to help users make informed decisions.</p>
+    </section>
+
+   
+
+    <script>
+       // JavaScript to animate the reviews with smooth fade in/out and left-right movement
+        
+  
+    const reviews = document.querySelectorAll('.review');
+    let currentReviewIndex = 0;
+
+    function showNextReview() {
+        reviews.forEach((review, index) => {
+            review.classList.remove('show', 'hide');
+            if (index === currentReviewIndex) {
+                review.classList.add('show');
+            } else {
+                review.classList.add('hide');
+            }
+        });
+        currentReviewIndex = (currentReviewIndex + 1) % reviews.length; // Loop through reviews
+    }
+
+    // Show the first review initially
+    showNextReview();
+
+    // Change reviews every 5 seconds
+    setInterval(showNextReview, 5000);
+
+    </script>
+  
+  <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TradeMate. All Rights Reserved.</p>
+        <p><a href="terms_of_service.html">Terms and Conditions</a> | <a href="privacy_policy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

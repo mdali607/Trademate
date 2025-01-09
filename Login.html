@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="../CSS_Stylesheets/Signup_login.css"> <!-- Link to external stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.PNG"> <!-- Adding Favicon -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1><img src="../Images/Logo.PNG" alt="TradeMate Logo" width="40px" height="40px"> TradeMate</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Index.html#about">About Us</a></li>
+            <li><a href="Service_Listings.html">Our Services</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+           
+        </ul>
+    </nav>
+
+    <!-- Login Section -->
+    <section id="login-section">
+        <h2>Login to Your Account</h2>
+        <form action="user-dashboard.html" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="Signup.html">Sign up here</a>.</p>
+    </section>
+     
+     <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TradeMate. All Rights Reserved.</p>
+        <p><a href="terms_of_service.html">Terms and Conditions</a> | <a href="privacy_policy.html">Privacy Policy</a></p>
+    </footer>
+    
+</body>
+</html>
